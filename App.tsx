@@ -8,6 +8,7 @@ import {
   View,
   FlatList,
   KeyboardAvoidingView,
+  Platform,
 } from 'react-native';
 import format from 'date-fns/format';
 import styles from './styles';
@@ -121,7 +122,9 @@ const App = () => {
     <View style={styles.container}>
       <SafeAreaView style={{backgroundColor: '#141A22', flex: 1}}>
         <StatusBar barStyle={'light-content'} />
-        <KeyboardAvoidingView behavior={undefined} style={styles.chatContainer}>
+        <KeyboardAvoidingView
+          behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+          style={styles.chatContainer}>
           <FlatList
             data={messages}
             renderItem={({item}) => <ChatRow {...item} />}

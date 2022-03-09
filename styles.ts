@@ -13,7 +13,11 @@ const styles = StyleSheet.create({
     backgroundColor: '#141A22',
     flexDirection: 'column',
   },
-  rowSpaceBetween: {flexDirection: 'row', justifyContent: 'space-between'},
+  rowSpaceBetween: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+  },
   chatRow: {
     flexDirection: 'row',
     width: '100%',
@@ -42,9 +46,11 @@ const styles = StyleSheet.create({
   },
   time: {
     fontSize: 9,
+    color: '#fff',
   },
   author: {
     color: '#71BAFA',
+    marginRight: 10,
   },
   text: {
     color: '#fff',
@@ -72,7 +78,7 @@ const styles = StyleSheet.create({
     borderColor: '#71BAFA',
     height: 55,
   },
-  textInput: {backgroundColor: '#141A22', flex: 1},
+  textInput: {backgroundColor: '#141A22', flex: 1, color: '#fff'},
   submit: {
     width: 35,
     height: 35,
